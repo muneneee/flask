@@ -5,10 +5,16 @@
         {% if title %}
         <title> {{ title }} </title>
         {% else %}
-        <title>Welcom to NEWSHUB </title>
+        <title>Welcome to NEWSHUB </title>
         {% endif %}
     </head>
     <body>
-        
+        <h3>News Sources</h3>
+        <ul>
+            {% for us_new in us %}
+                <li>{{ us_new.name }}</li>
+                    <p>{{ us_new.description }}</p>
+            {% endfor %}
+        </ul>
     </body>
 </html>
