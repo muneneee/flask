@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
+{%extends 'base.html'%}
+{% block content %}
+    <div class="container">
 
-    </head>
-    <body>
-        {% block content %}
-            <h3>News Sources</h3>
-            <div class="container">
+        {% for new, des, i,lin in context %}
 
-                {% for new, des, i,lin in context %}
+            <img src="{{i}}" alt="">
+            <h4>{{ new }}</h4>
+            <p>{{des}}</p>
+            <p><a href="{{lin}}" target="blank">link</a></p>
 
-                <img src="{{i}}" alt="">
-                <h4>{{ new }}</h4>
-                <p> {{des}}</p>
-                <p><a href="{{lin}}" target="blank">link</a></p>
-
-                {% endfor %}
+        {% endfor %}
 
 
-            </div>
-        {% endblock %}   
-        
-    </body>
-</html>
+    </div>
+{% endblock %}   
