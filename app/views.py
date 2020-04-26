@@ -18,7 +18,7 @@ def index():
 
     desc = []
     news = []
-    img = []
+    date = []
     link = []
 
 
@@ -27,10 +27,10 @@ def index():
 
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
-        img.append(myarticles['urlToImage'])
+        date.append(myarticles['publishedAt'])
         link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img,link)
+    mylist = zip(news, desc, date,link)
 
     title = 'Home - Welcome to newshub'
     return render_template('index.html', title = title,context= mylist)
@@ -51,7 +51,7 @@ def cnn():
 
     desc = []
     news = []
-    img = []
+    date = []
     link = []
 
     for i in range(len(articles)):
@@ -59,10 +59,10 @@ def cnn():
 
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
-        img.append(myarticles['urlToImage'])
+        date.append(myarticles['publishedAt'])
         link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img,link)
+    mylist = zip(news, desc, date,link)
 
     title = 'Home - Welcome to newshub'
     return render_template('cnn.html', title = title,context= mylist)
@@ -82,7 +82,7 @@ def espn():
 
     desc = []
     news = []
-    img = []
+    date = []
     link = []
 
     for i in range(len(articles)):
@@ -90,10 +90,10 @@ def espn():
 
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
-        img.append(myarticles['urlToImage'])
+        date.append(myarticles['publishedAt'])
         link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img,link)
+    mylist = zip(news, desc, date,link)
 
     title = 'Home - Welcome to newshub'
     return render_template('espn.html', title = title,context= mylist)
@@ -113,7 +113,7 @@ def fortune():
 
     desc = []
     news = []
-    img = []
+    date = []
     link =[]
 
     for i in range(len(articles)):
@@ -121,10 +121,10 @@ def fortune():
 
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
-        img.append(myarticles['urlToImage'])
+        date.append(myarticles['publishedAt'])
         link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img,link)
+    mylist = zip(news, desc, date,link)
 
     title = 'Home - Welcome to newshub'
     return render_template('fortune.html', title = title,context= mylist)
@@ -144,7 +144,7 @@ def ign():
 
     desc = []
     news = []
-    img = []
+    date = []
     link = []
 
     for i in range(len(articles)):
@@ -152,10 +152,10 @@ def ign():
 
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
-        img.append(myarticles['urlToImage'])
+        date.append(myarticles['publishedAt'])
         link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img,link)
+    mylist = zip(news, desc, date,link)
 
     title = 'Home - Welcome to newshub'
     return render_template('ign.html', title = title,context= mylist)
