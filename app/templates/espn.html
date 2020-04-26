@@ -1,16 +1,37 @@
 {%extends 'base.html'%}
+
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@423&display=swap" rel="stylesheet">
+{% endblock %}
+
+
 {% block content %}
-        <div class="container">
+    <h1 class="text-center" style="font-family: 'Josefin Sans', sans-serif; font-weight: bold;">FOX NEWS</h1>
+    
 
-            {% for new, des, i,lin in context %}
+        {% for new, des, dat,lin in context %}
+            <hr>
+            <hr>
+            <div class="card">
+                <div class="card-header" style="font-family: 'Josefin Sans', sans-serif;font-size: xx-large; text-decoration: underline; ">
+                    {{ new }}
+                </div>
+                <div class="card-body" style="background-color: turquoise;">
+                    <blockquote class="blockquote mb-0">
+                        <p style="font-family: 'Josefin Sans', sans-serif;font-size: x-large;">{{des}}</p>
+                        <button class="btn btn-info btn-sm" style="font-family: 'Josefin Sans', sans-serif;font-size: large;"><a href="{{lin}}" target="blank">link</a></button>
+                        <footer class="blockquote-footer">{{dat}}</footer>
+                    </blockquote>
+                </div>
 
-            <img src="{{i}}" alt="">
-            <h4>{{ new }}</h4>
-            <p> {{des}}</p>
-            <p><a href="{{lin}}" target="blank">link</a></p>
+            </div>
+            <hr>
+            <hr>
+            
+        {% endfor %}
 
-            {% endfor %}
 
-
-        </div>
 {% endblock %}   
