@@ -19,6 +19,8 @@ def index():
     desc = []
     news = []
     img = []
+    link = []
+
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -26,8 +28,9 @@ def index():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img)
+    mylist = zip(news, desc, img,link)
 
     title = 'Home - Welcome to newshub'
     return render_template('index.html', title = title,context= mylist)
@@ -35,9 +38,9 @@ def index():
 
 
 @app.route('/cnn')
-def index():
+def cnn():
     '''
-    view page function that returns index page
+    view page function that returns cnn page
     '''
 
     newsapi = NewsApiClient(api_key = 'e7f56e932284432c89095aa5928310c7' )
@@ -49,6 +52,7 @@ def index():
     desc = []
     news = []
     img = []
+    link = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -56,17 +60,18 @@ def index():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img)
+    mylist = zip(news, desc, img,link)
 
     title = 'Home - Welcome to newshub'
-    return render_template('index.html', title = title,context= mylist)
+    return render_template('cnn.html', title = title,context= mylist)
 
 
 @app.route('/espn')
-def index():
+def espn():
     '''
-    view page function that returns index page
+    view page function that returns espn page
     '''
 
     newsapi = NewsApiClient(api_key = 'e7f56e932284432c89095aa5928310c7' )
@@ -78,6 +83,7 @@ def index():
     desc = []
     news = []
     img = []
+    link = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -85,17 +91,18 @@ def index():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img)
+    mylist = zip(news, desc, img,link)
 
     title = 'Home - Welcome to newshub'
-    return render_template('index.html', title = title,context= mylist)
+    return render_template('espn.html', title = title,context= mylist)
 
 
 @app.route('/fortune')
-def index():
+def fortune():
     '''
-    view page function that returns index page
+    view page function that returns fortune page
     '''
 
     newsapi = NewsApiClient(api_key = 'e7f56e932284432c89095aa5928310c7' )
@@ -107,6 +114,7 @@ def index():
     desc = []
     news = []
     img = []
+    link =[]
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -114,17 +122,18 @@ def index():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img)
+    mylist = zip(news, desc, img,link)
 
     title = 'Home - Welcome to newshub'
-    return render_template('index.html', title = title,context= mylist)
+    return render_template('fortune.html', title = title,context= mylist)
 
 
 @app.route('/ign')
-def index():
+def ign():
     '''
-    view page function that returns index page
+    view page function that returns ign page
     '''
 
     newsapi = NewsApiClient(api_key = 'e7f56e932284432c89095aa5928310c7' )
@@ -136,6 +145,7 @@ def index():
     desc = []
     news = []
     img = []
+    link = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -143,8 +153,9 @@ def index():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        link.append(myarticles['url'])
 
-    mylist = zip(news, desc, img)
+    mylist = zip(news, desc, img,link)
 
     title = 'Home - Welcome to newshub'
-    return render_template('index.html', title = title,context= mylist)
+    return render_template('ign.html', title = title,context= mylist)

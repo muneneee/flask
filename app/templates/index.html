@@ -12,11 +12,12 @@
         <h3>News Sources</h3>
         <div class="container">
 
-            {% for new, des, i in context %}
+            {% for new, des, i,lin in context %}
 
             <img src="{{i}}" alt="">
             <h4>{{ new }}</h4>
             <p> {{des}}</p>
+            <p><a href="{{lin}}" target="blank">link</a></p>
 
             {% endfor %}
 
