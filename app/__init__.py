@@ -1,5 +1,6 @@
 from flask import Flask
 from .config import DevConfig
+from flask_bootstarp import Bootstrap
 
 #init app
 app = Flask(__name__,instance_relative_config = True)
@@ -7,5 +8,8 @@ app = Flask(__name__,instance_relative_config = True)
 #setting config
 app.config.from_object(DevConfig)
 app.config.from_pyfile('config.py')
+
+#init flask extensions
+bootstrap = Bootstrap(app)
 
 from app import views
