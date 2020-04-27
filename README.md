@@ -1,19 +1,19 @@
 ### NEWSHUB
 This is an independent project for Moringa school
 
-##Contributors
+###Contributors
 *Kevin Munene
 
-##Technologies used
+###Technologies used
   *Python3.6
   *Flask framework
   *HTML,CSS,Bootstrap
   
-##Live server
+###Live server
 https://newske.herokuapp.com/
 The link above is for the live server
 
-##Set-up and installation
+###Set-up and installation
 1. Clone or download the Repo
 2. Create a virtual environment
 3. Read the specs and requirements files and Install all the requirements.
@@ -22,11 +22,11 @@ The link above is for the live server
 7. Run ./start.py
 8. Access the application through `http://127.0.0.1:5000/'
 
-##Known Bugs
+###Known Bugs
 I am curently not aware of any bugs .But if any is found please contact me.
 
-##Contact Information
+###Contact Information
 lukekevin39@gmail.com
 
-##License
+###License
 MIT 
